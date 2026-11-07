@@ -15,7 +15,8 @@
   h1{font-size:24px; margin:0 0 4px}
   header p{margin:0; color:#B9C6DA; font-size:14px}
   main{padding:28px 0 60px}
-  h2{font-size:19px; margin:34px 0 8px; color:var(--navy)}
+  h2{font-size:19px; margin:44px 0 8px; color:var(--navy); padding-top:8px; border-top:1px solid var(--line)}
+  h2:first-child{border-top:0; margin-top:10px}
   h3{font-size:15px; margin:22px 0 6px; text-transform:uppercase; letter-spacing:.08em; color:var(--crust)}
   p, li{font-size:15px}
   table{border-collapse:collapse; width:100%; margin:10px 0 6px; background:#fff}
@@ -23,23 +24,25 @@
   th{background:#EDF2F7}
   .okvir{background:#fff; border:1px solid var(--line); border-left:3px solid var(--crust);
          border-radius:8px; padding:14px 16px; margin:18px 0}
-  .jezik{display:flex; gap:10px; margin-top:14px}
+  .jezik{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
   .jezik a{background:rgba(255,255,255,.12); color:#fff; text-decoration:none; border-radius:99px;
            padding:4px 12px; font-size:13px}
   footer{border-top:1px solid var(--line); color:var(--muted); font-size:13px; padding:18px 0 40px}
   a{color:var(--crust)}
+  code{font-size:13px}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <h1>Math Space — pravila privatnosti</h1>
-    <p>Zadnja izmjena / Last updated: 26. rujna 2026. / 26 September 2026</p>
-    <div class="jezik"><a href="#hr">Hrvatski</a><a href="#en">English</a></div>
+    <p>Zadnja izmjena / Last updated: 7. 11. 2026.</p>
+    <div class="jezik"><a href="#hr">Hrvatski</a><a href="#en">English</a><a href="#de">Deutsch</a><a href="#it">Italiano</a><a href="#sl">Slovenščina</a></div>
   </div>
 </header>
 
 <main class="wrap">
+
 <h2 id="hr">Hrvatski</h2>
 
 <p>Ova pravila opisuju kako aplikacija <strong>Math Space</strong> (Google Play identifikator
@@ -56,16 +59,15 @@ uz roditelja ili skrbnika.</p>
 <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>.</p>
 
 <h3>Što se čuva i gdje</h3>
-<p>Svi podaci navedeni u tablici ostaju isključivo u memoriji uređaja na kojem je aplikacija
-instalirana. Ne prenose se na naš poslužitelj jer ga nemamo, ne dijele se s trećim stranama i ne
-koriste se za oglašavanje.</p>
+<p>Svi podaci iz tablice ostaju isključivo na uređaju na kojem je aplikacija instalirana. Ne prenose se
+na naš poslužitelj jer ga nemamo, ne dijele se s trećim stranama i ne koriste se za oglašavanje.</p>
 <table>
   <tr><th>Podatak</th><th>Zašto postoji</th><th>Gdje se čuva</th></tr>
-  <tr><td>Ime profila djeteta (nadimak koji upisuje roditelj)</td><td>razlikovanje profila u igri</td><td>uređaj</td></tr>
-  <tr><td>Napredak: prijeđene podrazine, bodovi, restarti, greške u sudokuu, nedovršene mreže</td><td>nastavak igre i roditeljski pregled</td><td>uređaj</td></tr>
+  <tr><td>Ime profila djeteta (nadimak koji upisuje roditelj) i odabrani avatar</td><td>razlikovanje profila u igri</td><td>uređaj</td></tr>
+  <tr><td>Napredak: prijeđene podrazine, bodovi, restarti, sudoku mreže, dani riješenog dnevnog izazova</td><td>nastavak igre, svemirski album, značke i roditeljski pregled</td><td>uređaj</td></tr>
   <tr><td>Roditeljski PIN</td><td>zaštita kupnje, roditeljskog pregleda i poveznica izvan aplikacije; čuva se samo kao kriptografski sažetak sa solju, nikad kao broj</td><td>uređaj</td></tr>
-  <tr><td>Odabrani jezik aplikacije</td><td>da aplikacija ostane na hrvatskom ili engleskom kad se tako odabere</td><td>uređaj</td></tr>
-  <tr><td>Vrijeme zadnje uspješne provjere pretplate</td><td>rad aplikacije kad Google Play privremeno nije dostupan</td><td>uređaj</td></tr>
+  <tr><td>Postavke: jezik, tamna ili svijetla tema, zvuk</td><td>da aplikacija ostane onakva kakvu ste odabrali</td><td>uređaj</td></tr>
+  <tr><td>Stanje kupnje: vrijeme zadnje uspješne provjere pretplate i oznaka obavljene jednokratne kupnje</td><td>rad aplikacije kad Google Play privremeno nije dostupan</td><td>uređaj</td></tr>
 </table>
 <p>Sigurnosne kopije su isključene: podaci aplikacije ne odlaze u Google sigurnosnu kopiju niti u
 prijenos na novi uređaj.</p>
@@ -76,11 +78,11 @@ datoteke, identifikatore za oglašavanje, podatke o zdravlju ni bilo kakvu stati
 Aplikacija nema prijavu ni korisnički račun.</p>
 
 <h3>Google usluge u aplikaciji</h3>
-<p>Jedna radnja odvija se kroz Googleovu uslugu i za nju je Google samostalni voditelj obrade:</p>
+<p>Kupnja se odvija kroz Googleovu uslugu i za nju je Google samostalni voditelj obrade:</p>
 <ul>
-  <li><strong>Pretplata</strong> (Google Play Billing). Plaćanje, obnovu, otkazivanje i povrat vodi
-      Google Play. Aplikacija ne vidi i ne pohranjuje podatke o kartici; dobiva samo podatak je li
-      pretplata aktivna.</li>
+  <li><strong>Pretplata i jednokratna kupnja</strong> (Google Play Billing). Plaćanje, obnovu pretplate,
+      otkazivanje i povrat vodi Google Play. Aplikacija ne vidi i ne pohranjuje podatke o kartici; dobiva
+      samo podatak je li pretplata aktivna ili je jednokratna kupnja obavljena.</li>
 </ul>
 <p>Na tu obradu primjenjuju se
 <a href="https://policies.google.com/privacy">Googleova pravila privatnosti</a>.</p>
@@ -93,10 +95,11 @@ pregled i svaka poveznica izvan igre zaštićeni su roditeljskim PIN-om. Aplikac
 <h3>Brisanje podataka</h3>
 <ul>
   <li>U aplikaciji: <em>Za roditelja → Privatnost i podaci → Obriši sve podatke</em>. Time se brišu svi
-      profili, napredak i PIN.</li>
+      profili, napredak, dnevni izazov i PIN.</li>
   <li>Deinstalacijom aplikacije brišu se svi njezini podaci s uređaja.</li>
   <li>Pretplata se time ne otkazuje jer je vodi Google Play: <a
-      href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.</li>
+      href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
+      Jednokratna kupnja ostaje vezana uz Google račun kojim je plaćena.</li>
   <li>Za pitanja ili zahtjev u vezi s podacima pišite na
       <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>; odgovaramo u roku od 30 dana.</li>
 </ul>
@@ -112,6 +115,7 @@ osobnih podataka (AZOP), Selska cesta 136, Zagreb.</p>
 
 <h3>Izmjene pravila</h3>
 <p>Ako se pravila promijene, nova verzija objavljuje se na ovoj adresi s novim datumom izmjene.</p>
+
 
 <h2 id="en">English</h2>
 
@@ -129,15 +133,15 @@ parent or guardian.</p>
 <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>.</p>
 
 <h3>What is stored, and where</h3>
-<p>Everything listed below stays in the storage of the device the app is installed on. It is not sent
-to our server (we do not operate one), not shared with third parties and never used for advertising.</p>
+<p>Everything listed below stays on the device the app is installed on. It is not sent to our server (we
+do not operate one), not shared with third parties and never used for advertising.</p>
 <table>
   <tr><th>Data</th><th>Why it exists</th><th>Where it is kept</th></tr>
-  <tr><td>Child profile name (a nickname typed in by the parent)</td><td>telling profiles apart in the game</td><td>device</td></tr>
-  <tr><td>Progress: passed sublevels, points, restarts, sudoku mistakes, unfinished grids</td><td>continuing the game and the parent overview</td><td>device</td></tr>
+  <tr><td>Child profile name (a nickname typed in by the parent) and the chosen avatar</td><td>telling profiles apart in the game</td><td>device</td></tr>
+  <tr><td>Progress: passed sublevels, points, restarts, sudoku grids, days of the daily challenge</td><td>continuing the game, the space album, badges and the parent overview</td><td>device</td></tr>
   <tr><td>Parental PIN</td><td>protects purchases, the parent overview and links out of the app; stored only as a salted cryptographic hash, never as the number itself</td><td>device</td></tr>
-  <tr><td>Chosen app language</td><td>keeps the app in Croatian or English when chosen</td><td>device</td></tr>
-  <tr><td>Time of the last successful subscription check</td><td>keeps the app usable when Google Play is temporarily unreachable</td><td>device</td></tr>
+  <tr><td>Settings: language, dark or light theme, sound</td><td>keeps the app the way you set it</td><td>device</td></tr>
+  <tr><td>Purchase state: time of the last successful subscription check and a mark that the one-time purchase was made</td><td>keeps the app usable when Google Play is temporarily unreachable</td><td>device</td></tr>
 </table>
 <p>Backups are switched off: app data is not copied into Google backup or device transfer.</p>
 
@@ -147,13 +151,13 @@ files, advertising identifiers, health data or any usage analytics. The app has 
 account.</p>
 
 <h3>Google services inside the app</h3>
-<p>One operation runs through a Google service, for which Google acts as an independent controller:</p>
+<p>Purchases run through a Google service, for which Google acts as an independent controller:</p>
 <ul>
-  <li><strong>Subscription</strong> (Google Play Billing). Payment, renewal, cancellation and refunds
-      are handled by Google Play. The app never sees or stores card details; it only learns whether a
-      subscription is active.</li>
+  <li><strong>Subscription and one-time purchase</strong> (Google Play Billing). Payment, renewal,
+      cancellation and refunds are handled by Google Play. The app never sees or stores card details; it
+      only learns whether a subscription is active or the one-time purchase was made.</li>
 </ul>
-<p>It is governed by the
+<p>This is governed by the
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
 <h3>Children</h3>
@@ -164,10 +168,11 @@ and every link that leads out of the game sit behind the parental PIN. The app s
 <h3>Deleting data</h3>
 <ul>
   <li>In the app: <em>For parents → Privacy and data → Delete all data</em>. This removes every profile,
-      all progress and the PIN.</li>
+      all progress, the daily challenge and the PIN.</li>
   <li>Uninstalling the app removes all of its data from the device.</li>
   <li>That does not cancel the subscription, which is managed by Google Play:
-      <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.</li>
+      <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
+      The one-time purchase stays with the Google account it was paid from.</li>
   <li>For questions or a data request write to
       <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>; we reply within 30 days.</li>
 </ul>
@@ -178,13 +183,237 @@ and every link that leads out of the game sit behind the parental PIN. The app s
 <h3>Your rights</h3>
 <p>Under the GDPR you have the right of access, rectification, erasure and restriction of processing.
 Since the data stays on your device you control it directly; for anything else use the contact address
-above. You may also lodge a complaint with the Croatian Personal Data Protection Agency (AZOP),
-Selska cesta 136, Zagreb.</p>
+above. You may also lodge a complaint with the data protection authority of your country or with the
+Croatian Personal Data Protection Agency (AZOP), Selska cesta 136, Zagreb.</p>
 
 <h3>Changes</h3>
 <p>If this policy changes, the new version is published at this address with a new date.</p>
 
-<footer class="wrap">Math Space · com.weberpbj.math.space · weberp.bj@gmail.com</footer>
+
+<h2 id="de">Deutsch</h2>
+
+<p>Diese Erklärung beschreibt, wie die App <strong>Math Space</strong> (Google-Play-Kennung
+<code>com.weberpbj.math.space</code>) mit Daten umgeht. Die App ist für Kinder gedacht, die sie gemeinsam
+mit einem Elternteil oder einer Betreuungsperson nutzen.</p>
+
+<div class="okvir">
+  <strong>Kurz gesagt:</strong> Die App sendet keine Daten über das Kind vom Gerät weg. Es gibt keine Werbung,
+  keine Analyse, kein Tracking und kein Konto auf unserem Server — einen Server gibt es nicht.
+</div>
+
+<h3>Verantwortlicher</h3>
+<p>Branimir Jakirčević, Zadar, Kroatien. Kontakt für alle Fragen zum Datenschutz:
+<a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>.</p>
+
+<h3>Was gespeichert wird und wo</h3>
+<p>Alle Daten aus der Tabelle bleiben ausschließlich auf dem Gerät, auf dem die App installiert ist. Sie
+werden nicht an unseren Server übertragen (wir betreiben keinen), nicht an Dritte weitergegeben und nie
+für Werbung verwendet.</p>
+<table>
+  <tr><th>Daten</th><th>Wozu</th><th>Wo gespeichert</th></tr>
+  <tr><td>Profilname des Kindes (ein Spitzname, den die Eltern eingeben) und der gewählte Avatar</td><td>Unterscheidung der Profile im Spiel</td><td>Gerät</td></tr>
+  <tr><td>Fortschritt: geschaffte Unterlevel, Punkte, Neustarts, Sudoku-Gitter, Tage der täglichen Herausforderung</td><td>Weiterspielen, Weltraumalbum, Abzeichen und Elternübersicht</td><td>Gerät</td></tr>
+  <tr><td>Eltern-PIN</td><td>schützt Käufe, die Elternübersicht und Links aus der App; nur als gesalzener kryptografischer Hashwert gespeichert, nie als Zahl</td><td>Gerät</td></tr>
+  <tr><td>Einstellungen: Sprache, dunkles oder helles Design, Ton</td><td>damit die App so bleibt, wie Sie sie eingestellt haben</td><td>Gerät</td></tr>
+  <tr><td>Kaufstatus: Zeitpunkt der letzten erfolgreichen Abo-Prüfung und Vermerk über den Einmalkauf</td><td>Nutzung der App, wenn Google Play vorübergehend nicht erreichbar ist</td><td>Gerät</td></tr>
+</table>
+<p>Sicherungen sind ausgeschaltet: App-Daten gehen weder in die Google-Sicherung noch in eine Übertragung
+auf ein neues Gerät.</p>
+
+<h3>Was die App nicht erhebt</h3>
+<p>Vor- und Nachname des Kindes, Geburtsdatum, E-Mail-Adresse, Fotos, Stimme, Standort, Kontakte,
+Nachrichten, Dateien, Werbe-IDs, Gesundheitsdaten oder Nutzungsstatistiken. Die App hat keine Anmeldung
+und kein Benutzerkonto.</p>
+
+<h3>Google-Dienste in der App</h3>
+<p>Käufe laufen über einen Google-Dienst, für den Google eigenständig verantwortlich ist:</p>
+<ul>
+  <li><strong>Abo und Einmalkauf</strong> (Google Play Billing). Zahlung, Verlängerung, Kündigung und
+      Erstattung wickelt Google Play ab. Die App sieht und speichert keine Kartendaten; sie erfährt nur, ob
+      ein Abo aktiv ist oder der Einmalkauf getätigt wurde.</li>
+</ul>
+<p>Dafür gilt die <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>.</p>
+
+<h3>Kinder</h3>
+<p>Die App ist für Familien gemacht. Das Kind registriert sich nirgends und gibt keine personenbezogenen
+Daten ein. Ein Profil ist nur ein Name oder Spitzname, den die Eltern eingeben und der auf dem Gerät
+bleibt. Käufe, die Elternübersicht und jeder Link aus dem Spiel sind durch die Eltern-PIN geschützt. Die
+App zeigt keine Werbung.</p>
+
+<h3>Daten löschen</h3>
+<ul>
+  <li>In der App: <em>Für Eltern → Datenschutz und Daten → Alle Daten löschen</em>. Damit werden alle
+      Profile, der Fortschritt, die tägliche Herausforderung und die PIN gelöscht.</li>
+  <li>Beim Deinstallieren werden alle Daten der App vom Gerät entfernt.</li>
+  <li>Das Abo wird dadurch nicht gekündigt, es wird in Google Play verwaltet:
+      <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
+      Der Einmalkauf bleibt mit dem Google-Konto verbunden, mit dem er bezahlt wurde.</li>
+  <li>Fragen oder Anfragen zu Daten an
+      <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>; wir antworten innerhalb von 30 Tagen.</li>
+</ul>
+
+<h3>Speicherdauer</h3>
+<p>Solange die App installiert ist oder bis Sie die Daten wie oben beschrieben löschen.</p>
+
+<h3>Ihre Rechte</h3>
+<p>Nach der DSGVO haben Sie das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der
+Verarbeitung. Da die Daten auf Ihrem Gerät bleiben, verwalten Sie sie direkt; für alles andere nutzen Sie
+die Kontaktadresse oben. Beschwerden können Sie bei der Datenschutzaufsichtsbehörde Ihres Landes oder bei
+der kroatischen Behörde AZOP, Selska cesta 136, Zagreb, einreichen.</p>
+
+<h3>Änderungen</h3>
+<p>Ändert sich diese Erklärung, wird die neue Fassung unter dieser Adresse mit neuem Datum veröffentlicht.</p>
+
+
+<h2 id="it">Italiano</h2>
+
+<p>Questa informativa descrive come l’app <strong>Math Space</strong> (ID Google Play
+<code>com.weberpbj.math.space</code>) tratta i dati. L’app è pensata per bambini che la usano insieme a un
+genitore o a chi ne fa le veci.</p>
+
+<div class="okvir">
+  <strong>In breve:</strong> l’app non invia alcun dato sul bambino fuori dal dispositivo. Niente pubblicità,
+  niente analisi, niente tracciamento e nessun account sul nostro server — un server non esiste.
+</div>
+
+<h3>Titolare del trattamento</h3>
+<p>Branimir Jakirčević, Zara (Zadar), Croazia. Contatto per ogni domanda sulla privacy:
+<a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>.</p>
+
+<h3>Cosa viene salvato e dove</h3>
+<p>Tutti i dati della tabella restano esclusivamente sul dispositivo su cui è installata l’app. Non
+vengono inviati al nostro server (non ne abbiamo uno), non vengono condivisi con terzi e non vengono mai
+usati per pubblicità.</p>
+<table>
+  <tr><th>Dato</th><th>A cosa serve</th><th>Dove è salvato</th></tr>
+  <tr><td>Nome del profilo del bambino (un soprannome inserito dal genitore) e l’avatar scelto</td><td>distinguere i profili nel gioco</td><td>dispositivo</td></tr>
+  <tr><td>Progressi: sottolivelli superati, punti, ripartenze, griglie di sudoku, giorni della sfida del giorno</td><td>continuare il gioco, album spaziale, distintivi e riepilogo per i genitori</td><td>dispositivo</td></tr>
+  <tr><td>PIN genitori</td><td>protegge acquisti, riepilogo per i genitori e link fuori dall’app; salvato solo come hash crittografico con sale, mai come numero</td><td>dispositivo</td></tr>
+  <tr><td>Impostazioni: lingua, tema scuro o chiaro, suono</td><td>mantenere l’app come l’avete impostata</td><td>dispositivo</td></tr>
+  <tr><td>Stato degli acquisti: ora dell’ultima verifica riuscita dell’abbonamento e indicazione dell’acquisto unico</td><td>usare l’app quando Google Play non è temporaneamente raggiungibile</td><td>dispositivo</td></tr>
+</table>
+<p>I backup sono disattivati: i dati dell’app non finiscono nel backup di Google né nel trasferimento a un
+nuovo dispositivo.</p>
+
+<h3>Cosa l’app non raccoglie</h3>
+<p>Nome e cognome del bambino, data di nascita, indirizzo e-mail, foto, voce, posizione, contatti,
+messaggi, file, identificatori pubblicitari, dati sanitari o statistiche d’uso. L’app non ha accesso né
+account utente.</p>
+
+<h3>Servizi Google nell’app</h3>
+<p>Gli acquisti passano attraverso un servizio Google, per il quale Google è titolare autonomo:</p>
+<ul>
+  <li><strong>Abbonamento e acquisto unico</strong> (Google Play Billing). Pagamento, rinnovo, disdetta e
+      rimborsi sono gestiti da Google Play. L’app non vede né salva i dati della carta; sa solo se un
+      abbonamento è attivo o se l’acquisto unico è stato fatto.</li>
+</ul>
+<p>Si applica l’<a href="https://policies.google.com/privacy">informativa sulla privacy di Google</a>.</p>
+
+<h3>Bambini</h3>
+<p>L’app è fatta per le famiglie. Il bambino non si registra da nessuna parte e non inserisce dati
+personali. Un profilo è solo un nome o un soprannome inserito dal genitore, che resta sul dispositivo.
+Acquisti, riepilogo per i genitori e ogni link fuori dal gioco sono protetti dal PIN genitori. L’app non
+mostra pubblicità.</p>
+
+<h3>Eliminare i dati</h3>
+<ul>
+  <li>Nell’app: <em>Per i genitori → Privacy e dati → Elimina tutti i dati</em>. Vengono eliminati tutti i
+      profili, i progressi, la sfida del giorno e il PIN.</li>
+  <li>Disinstallando l’app vengono rimossi tutti i suoi dati dal dispositivo.</li>
+  <li>Questo non disdice l’abbonamento, che è gestito da Google Play:
+      <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
+      L’acquisto unico resta legato all’account Google con cui è stato pagato.</li>
+  <li>Per domande o richieste sui dati scrivete a
+      <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>; rispondiamo entro 30 giorni.</li>
+</ul>
+
+<h3>Per quanto tempo</h3>
+<p>Finché l’app è installata o finché non eliminate i dati come descritto sopra.</p>
+
+<h3>I vostri diritti</h3>
+<p>Secondo il GDPR avete diritto di accesso, rettifica, cancellazione e limitazione del trattamento.
+Poiché i dati restano sul vostro dispositivo, li gestite direttamente; per tutto il resto usate il
+contatto indicato sopra. Potete presentare reclamo all’autorità di protezione dei dati del vostro paese
+o all’autorità croata AZOP, Selska cesta 136, Zagabria.</p>
+
+<h3>Modifiche</h3>
+<p>Se l’informativa cambia, la nuova versione viene pubblicata a questo indirizzo con una nuova data.</p>
+
+
+<h2 id="sl">Slovenščina</h2>
+
+<p>Ta pravila opisujejo, kako aplikacija <strong>Math Space</strong> (oznaka v Googlu Play
+<code>com.weberpbj.math.space</code>) ravna s podatki. Aplikacija je namenjena otrokom, ki jo uporabljajo
+skupaj s staršem ali skrbnikom.</p>
+
+<div class="okvir">
+  <strong>Na kratko:</strong> aplikacija ne pošilja nobenih podatkov o otroku z naprave. Ni oglasov, ni
+  analitike, ni sledenja in ni uporabniškega računa na našem strežniku — strežnika ni.
+</div>
+
+<h3>Upravljavec</h3>
+<p>Branimir Jakirčević, Zadar, Hrvaška. Stik za vsa vprašanja o zasebnosti:
+<a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>.</p>
+
+<h3>Kaj se hrani in kje</h3>
+<p>Vsi podatki iz preglednice ostanejo izključno na napravi, na kateri je aplikacija nameščena. Ne
+prenašajo se na naš strežnik (nimamo ga), ne delijo se s tretjimi osebami in se nikoli ne uporabljajo za
+oglaševanje.</p>
+<table>
+  <tr><th>Podatek</th><th>Čemu služi</th><th>Kje se hrani</th></tr>
+  <tr><td>Ime otrokovega profila (vzdevek, ki ga vpiše starš) in izbrani avatar</td><td>razlikovanje profilov v igri</td><td>naprava</td></tr>
+  <tr><td>Napredek: opravljene podravni, točke, ponovni zagoni, mreže sudokuja, dnevi dnevnega izziva</td><td>nadaljevanje igre, vesoljski album, značke in pregled za starše</td><td>naprava</td></tr>
+  <tr><td>Starševska koda PIN</td><td>ščiti nakupe, pregled za starše in povezave iz aplikacije; hrani se samo kot kriptografski povzetek s soljo, nikoli kot število</td><td>naprava</td></tr>
+  <tr><td>Nastavitve: jezik, temna ali svetla tema, zvok</td><td>da aplikacija ostane takšna, kot ste jo nastavili</td><td>naprava</td></tr>
+  <tr><td>Stanje nakupov: čas zadnjega uspešnega preverjanja naročnine in oznaka opravljenega enkratnega nakupa</td><td>delovanje aplikacije, ko Google Play začasno ni dosegljiv</td><td>naprava</td></tr>
+</table>
+<p>Varnostne kopije so izklopljene: podatki aplikacije ne gredo v Googlovo varnostno kopijo niti v prenos
+na novo napravo.</p>
+
+<h3>Česa aplikacija ne zbira</h3>
+<p>Otrokovega imena in priimka, datuma rojstva, e-poštnega naslova, fotografij, glasu, lokacije,
+stikov, sporočil, datotek, oglaševalskih identifikatorjev, zdravstvenih podatkov ali statistike uporabe.
+Aplikacija nima prijave ne uporabniškega računa.</p>
+
+<h3>Googlove storitve v aplikaciji</h3>
+<p>Nakupi potekajo prek Googlove storitve, za katero je Google samostojni upravljavec:</p>
+<ul>
+  <li><strong>Naročnina in enkraten nakup</strong> (Google Play Billing). Plačilo, podaljšanje, preklic in
+      vračilo ureja Google Play. Aplikacija ne vidi in ne hrani podatkov o kartici; izve le, ali je
+      naročnina aktivna oziroma ali je bil enkraten nakup opravljen.</li>
+</ul>
+<p>Za to obdelavo veljajo <a href="https://policies.google.com/privacy">Googlova pravila o zasebnosti</a>.</p>
+
+<h3>Otroci</h3>
+<p>Aplikacija je narejena za družine. Otrok se nikjer ne registrira in ne vpisuje osebnih podatkov.
+Profil je le ime ali vzdevek, ki ga vpiše starš in ostane na napravi. Nakupi, pregled za starše in vsaka
+povezava iz igre so zaščiteni s starševsko kodo PIN. Aplikacija ne prikazuje oglasov.</p>
+
+<h3>Brisanje podatkov</h3>
+<ul>
+  <li>V aplikaciji: <em>Za starše → Zasebnost in podatki → Izbriši vse podatke</em>. S tem se izbrišejo
+      vsi profili, napredek, dnevni izziv in koda PIN.</li>
+  <li>Z odstranitvijo aplikacije se z naprave izbrišejo vsi njeni podatki.</li>
+  <li>Naročnina se s tem ne prekliče, ker jo ureja Google Play:
+      <a href="https://play.google.com/store/account/subscriptions">play.google.com/store/account/subscriptions</a>.
+      Enkraten nakup ostane vezan na Googlov račun, s katerim je bil plačan.</li>
+  <li>Za vprašanja ali zahteve glede podatkov pišite na
+      <a href="mailto:weberp.bj@gmail.com">weberp.bj@gmail.com</a>; odgovorimo v 30 dneh.</li>
+</ul>
+
+<h3>Koliko časa se podatki hranijo</h3>
+<p>Dokler je aplikacija nameščena ali dokler jih ne izbrišete, kot je opisano zgoraj.</p>
+
+<h3>Vaše pravice</h3>
+<p>Po Splošni uredbi o varstvu podatkov (GDPR) imate pravico do dostopa, popravka, izbrisa in omejitve
+obdelave. Ker podatki ostanejo na vaši napravi, jih upravljate neposredno; za vse drugo uporabite
+zgornji kontaktni naslov. Pritožbo lahko vložite pri organu za varstvo podatkov v svoji državi ali pri
+hrvaški agenciji AZOP, Selska cesta 136, Zagreb.</p>
+
+<h3>Spremembe</h3>
+<p>Če se pravila spremenijo, se nova različica objavi na tem naslovu z novim datumom.</p>
+
+<footer>Math Space · com.weberpbj.math.space · weberp.bj@gmail.com</footer>
 </main>
 </body>
 </html>
